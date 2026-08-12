@@ -12,7 +12,10 @@ repo_path = "repositories/requests"
 files = load_files(repo_path)
 files = filter_files(files)
 
-documents = create_documents(files)
+documents = create_documents(
+    files,
+    repository="requests",
+)
 chunks = split_documents(documents)
 
 vector_size = len(
